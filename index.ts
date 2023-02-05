@@ -2,10 +2,12 @@ import "reflect-metadata"
 import { buildSchema } from "type-graphql"
 import express from "express"
 import { graphqlHTTP } from "express-graphql"
-import { ActorResolver } from "./Actors/actors.resolvers"
-import { AuthorResolver } from "./Authors/authors.resolvers"
-import { MovieResolver } from "./Movies/movies.resolvers"
+import { ActorResolver } from "./src/entity/Actors/actors.resolvers"
+import { AuthorResolver } from "./src/entity/Authors/authors.resolvers"
+import { MovieResolver } from "./src/entity/Movies/movies.resolvers"
+import dotenv from "dotenv"
 
+dotenv.config()
 async function main() {
     const schema = await buildSchema({
         resolvers: [ActorResolver, AuthorResolver, MovieResolver],
@@ -18,13 +20,20 @@ async function main() {
         "/graphql",
         graphqlHTTP({
             schema: schema,
+            graphiql: false,
+        })
+    )
+
+    app.use(
+        "/graphiql",
+        graphqlHTTP({
+            schema: schema,
             graphiql: true,
         })
     )
 
-    app.listen(3001)
-
-    console.log("Running a GraphQL API server at http://localhost:8000/graphql")
+    app.listen(process.env.PORT)
+    console.log(`Running a GraphQL API server at http://localhost:${process.env.PORT}/graphql`)
 }
 
 main()
