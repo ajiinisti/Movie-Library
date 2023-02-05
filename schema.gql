@@ -4,53 +4,62 @@
 # -----------------------------------------------
 
 type Actor {
-  id: Float!
-  name: String!
-  yearsactive: Float!
-}
+  """Actor's debut movie release date"""
+  activeyear: Float!
+  id: String!
+  movies: [Movie!]!
 
-input ActorInput {
+  """The name of the actor"""
   name: String!
-  yearsactive: Float!
+  sex: String!
 }
 
 type Author {
-  id: Float!
-  name: String!
-}
+  id: String!
+  movies: [Movie!]!
 
-input AuthorInput {
+  """The name of the author"""
   name: String!
+  sex: String!
 }
 
 type Movie {
-  id: Float!
-  name: String!
-  releasedate: Float!
-}
+  actors: [Actor!]
+  authors: [Author!]
 
-input MovieInput {
-  name: String!
-  releasedate: Float!
+  """Genre that describe movie plot"""
+  genre: String!
+  id: String!
+
+  """IMDb rating of the Movie"""
+  rating: Float!
+
+  """Released year of the Movie"""
+  releaseyear: Float!
+
+  """Title of the Movie"""
+  title: String!
 }
 
 type Mutation {
-  createActor(input: ActorInput!): Actor!
-  createAuthor(input: AuthorInput!): Author!
-  createMovie(input: MovieInput!): Movie!
-  deleteActor(id: Float!, input: Float!): Actor!
-  deleteAuthor(id: Float!, input: Float!): Author!
-  deleteMovie(id: Float!, input: Float!): Movie!
-  updateActor(id: Float!, input: ActorInput!): Actor!
-  updateAuthor(id: Float!, input: AuthorInput!): Author!
-  updateMovie(id: Float!, input: MovieInput!): Movie!
+  createActor(activeyear: Float!, name: String!, sex: String!): Actor!
+  createAuthor(name: String!, sex: String!): Author!
+  createMovie(genre: String!, rating: Float!, releaseyear: Float!, title: String!): Movie!
+  deleteActor(id: String!): Actor!
+  deleteAuthor(id: String!): Author!
+  deleteMovie(id: String!): Movie!
+  updateActor(activeyear: Float!, id: String!, name: String!, sex: String!): Actor!
+  updateActorInMovie(actorId: String!, movieId: String!): Movie!
+  updateAuthor(id: String!, name: String!, sex: String!): Author!
+  updateAuthorInMovie(authorId: String!, movieId: String!): Movie!
+  updateMovie(genre: String!, id: String!, rating: Float!, releaseyear: Float!, title: String!): Movie!
 }
 
 type Query {
-  getActor(id: Float!): Actor!
+  getActor(id: String!): Actor!
   getActors: [Actor!]!
-  getAuthor(id: Float!): Author!
+  getAuthor(id: String!): Author!
   getAuthors: [Author!]!
-  getMovie(id: Float!): Movie!
+  getMovie(id: String!): Movie!
   getMovies: [Movie!]!
 }
