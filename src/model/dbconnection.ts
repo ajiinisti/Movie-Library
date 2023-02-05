@@ -2,10 +2,10 @@ import { Sequelize, DataTypes } from "sequelize"
 import * as pg from 'pg';
 
 export function dbConnection() {
-    const sequelize = new Sequelize(`postgres://postgres:${process.env.SUPABASE_PASS}@db.${process.env.SUPABASE_URL}:6543/postgres`, {
+    const sequelize = new Sequelize(`postgres://postgres:${process.env.SUPABASE_PASS}@db.${process.env.SUPABASE_URL}:${process.env.SUPABASE_PORT}/postgres`, {
         dialectModule: pg
     })
-    console.log(`postgres://postgres:${process.env.SUPABASE_PASS}@db.${process.env.SUPABASE_URL}:6543/postgres`)
+    console.log(`postgres://postgres:${process.env.SUPABASE_PASS}@db.${process.env.SUPABASE_URL}:${process.env.SUPABASE_PORT}/postgres`)
 
     const Movies = sequelize.define('movies', {
         id: {
