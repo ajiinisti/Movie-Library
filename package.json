@@ -37,7 +37,8 @@
     "coverage": "jest --coverage --forceExit --detectOpenHandles",
     "start": "nodemon --exec  ts-node index.ts",
     "lint": "eslint --ext .js,.ts .",
-    "test": "jest --forceExit --detectOpenHandles"
+    "test": "jest --forceExit --detectOpenHandles",
+    "build": "nodemon --exec  ts-node index.ts"
   },
   "keywords": [],
   "author": "",
