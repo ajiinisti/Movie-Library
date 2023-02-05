@@ -5,6 +5,7 @@ export function dbConnection() {
     const sequelize = new Sequelize(`postgres://postgres:${process.env.SUPABASE_PASS}@db.${process.env.SUPABASE_URL}:6543/postgres`, {
         dialectModule: pg
     })
+    console.log(`postgres://postgres:${process.env.SUPABASE_PASS}@db.${process.env.SUPABASE_URL}:6543/postgres`)
 
     const Movies = sequelize.define('movies', {
         id: {
