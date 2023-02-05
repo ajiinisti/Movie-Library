@@ -35,7 +35,7 @@
   "main": "index.js",
   "scripts": {
     "coverage": "jest --coverage --forceExit --detectOpenHandles",
-    "devStart": "nodemon --exec  ts-node index.ts",
+    "start": "nodemon --exec  ts-node index.ts",
     "lint": "eslint --ext .js,.ts .",
     "test": "jest --forceExit --detectOpenHandles"
   },
