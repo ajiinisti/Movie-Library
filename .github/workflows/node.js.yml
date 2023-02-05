@@ -9,6 +9,12 @@ on:
   pull_request:
     branches: [ "main" ]
 
+env:
+  SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+  SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+  SUPABASE_PASS: ${{ secrets.SUPABASE_PASS }}
+  SUPABASE_PORT: ${{ secrets.SUPABASE_PORT }}
+
 jobs:
   build:
 
@@ -28,14 +34,6 @@ jobs:
         cache: 'npm'
         cache-dependency-path: package-lock.json
     - run: npm ci
-    - name: create env file
-      run: |
-        touch .env
-        echo SUPABASE_URL=${{ secrets.SUPABASE_URL }} >> .env
-        echo SUPABASE_KEY=${{ secrets.SUPABASE_KEY }} >> .env
-        echo SUPABASE_PASS=${{ secrets.SUPABASE_PASS }} >> .env
-        echo SUPABASE_PORT=${{ secrets.SUPABASE_PORT }} >> .env
-        echo PORT=${{ secrets.PORT }} >> .env
     - run: npm test
     - run: npm run build --if-present
     - name: Deploy production to Netlify
