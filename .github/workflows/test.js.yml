@@ -6,8 +6,6 @@ name: Testing
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 env:
   SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
