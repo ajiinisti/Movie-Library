@@ -122,6 +122,7 @@ export class Database{
     if(typeof genre !== undefined){
       user.setDataValue('genre', genre)
     }
+    user.save()
     
     const movie = new Movie()
     movie.id = user.getDataValue('id')
@@ -189,7 +190,7 @@ export class Database{
     const newMovies = await Movies.findByPk(movieId, {include: [{
       model: Actors
     }, {
-        model: Authors
+      model: Authors
     }]})    
     const movie = new Movie()
     movie.id = newMovies?.getDataValue('id') ?? false

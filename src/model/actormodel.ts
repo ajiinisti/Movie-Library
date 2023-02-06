@@ -121,6 +121,7 @@ export class Database{
     if(typeof activeyear !== undefined){
       user.setDataValue('sex', sex)
     }
+    user.save()
 
     const actor = new Actor()
     actor.id = user?.getDataValue('id') ?? false
@@ -128,7 +129,6 @@ export class Database{
     actor.activeyear = user?.getDataValue('activeyear') ?? false
     actor.sex = user?.getDataValue('sex') ?? false
     actor.movies = user?.getDataValue('movies') ?? false
-    
     return actor
   }
 }

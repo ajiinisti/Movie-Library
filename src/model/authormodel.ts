@@ -117,6 +117,7 @@ export class Database{
     if(typeof sex !== undefined){
       user.setDataValue('sex', sex)
     }
+    user.save()
 
     const author = new Author()
     author.id = user?.getDataValue('id') ?? false
