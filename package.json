@@ -23,7 +23,7 @@
   "scripts": {
     "coverage": "jest --coverage --forceExit --detectOpenHandles",
     "start": "node dist/index.js",
-    "lint": "eslint --ext .js,.ts .",
+    "lint": "eslint --ext .ts .",
     "test": "jest --forceExit --detectOpenHandles",
     "build": "tsc"
   },
