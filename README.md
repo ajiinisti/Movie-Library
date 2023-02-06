@@ -6,7 +6,7 @@
 Description:
 This is backend services to provide API call about Movies Library. There are 2 route for accessing the web aplication. The first one is for the graphql and the second is graphiql. The differences is you can use graphql user interface for calling api when you use graphiql. 
 
-[Link for Graphql](https://link-url-here.org)[Link for Graphiql](https://link-url-here.org)
+[Link for Graphql](https://movie-library-production-8d67.up.railway.app/graphql)                      [Link for Graphiql](https://movie-library-production-8d67.up.railway.app/graphiql)
 
 ## Databases
 
