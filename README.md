@@ -205,7 +205,7 @@ mutation{
 updateAuthorInMovie:
 ```graphql
 mutation{
-    updateAuthorrInMovie(movieId:"25c8d1d1-a599-48ce-84f0-6a04f0da8751",authorId:"2075ab80-e7c0-4a10-a39e-0c120159d1b5"){
+    updateAuthorInMovie(movieId:"25c8d1d1-a599-48ce-84f0-6a04f0da8751",authorId:"2075ab80-e7c0-4a10-a39e-0c120159d1b5"){
         id
         title
         releaseyear
