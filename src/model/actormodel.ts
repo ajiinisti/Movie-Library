@@ -115,10 +115,10 @@ export class Database{
     if(typeof name !== undefined){
       user.setDataValue('name', name)
     }
-    if(typeof name !== undefined){
+    if(typeof activeyear !== undefined){
       user.setDataValue('activeyear', activeyear)
     }
-    if(typeof activeyear !== undefined){
+    if(typeof sex !== undefined){
       user.setDataValue('sex', sex)
     }
     user.save()
