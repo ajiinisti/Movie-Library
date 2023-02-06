@@ -6,8 +6,8 @@
 Description:
 This is backend services to provide API call about Movies Library. There are 2 route for accessing the web aplication. The first one is for the graphql and the second is graphiql. The differences is you can use graphql user interface for calling api when you use graphiql. 
 
-[Link for Graphql](https://movie-library-production-8d67.up.railway.app/graphql)                      
-[Link for Graphiql](https://movie-library-production-8d67.up.railway.app/graphiql)
+Link for Graphql: [here](https://movie-library-production-8d67.up.railway.app/graphql)                      
+Link for Graphiql: [here](https://movie-library-production-8d67.up.railway.app/graphiql)
 
 ## Databases
 
@@ -117,8 +117,8 @@ mutation{
 }
 ```
 deleteAuthor : 
-```
-graphqlmutation{
+```graphql
+mutation{
     deleteAuthor(id:"2075ab80-e7c0-4a10-a39e-0c120159d1b5"){
         id
         name
