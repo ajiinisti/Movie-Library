@@ -1,3 +1,4 @@
 # Movie-Library
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e8dffeeb-422e-4651-94ca-ec63fb37131c/deploy-status)](https://app.netlify.com/sites/movie-lib-ajiinisti/deploys)
+[![example workflow](https://github.com/ajiinisti/Movie-Library/actions/workflows/node.js.yml/badge.svg)]
+[![example workflow](https://github.com/ajiinisti/Movie-Library/actions/workflows/test.js.yml/badge.svg)]
 Aji's movie library
