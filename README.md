@@ -48,7 +48,8 @@ mutation{
         sex
         activeyear
     }
-}```
+}
+```
 updateActor : 
 ```graphql
 mutation{
