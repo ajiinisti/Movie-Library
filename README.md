@@ -10,7 +10,7 @@ This is backend services to provide API call about Movies Library. There are 2 r
 
 ## Databases
 
-In the movie library there are 3 main table that we can use. Actor, Author and Movies. The relationship for the table are Actor has many to many relationship to Movies and Movies has many to many relationship to Author. Because of the m2m rationship, there are another table formed from this. Write is table when relationship between Author and Movie created and Play is table when relationship between Actor and Movie created.
+In the movie library there are 3 main table that we can use. **Actors**, **Authors** and **Movies**. The relationship for the table are Actor has many to many relationship to Movies and Movies has many to many relationship to Author. Because of the m2m rationship, there are another table formed from this. **Writes** is table when relationship between Author and Movie created. **Play** is table when relationship between Actor and Movie created.
 
 ## How to Use the Graphql
 
