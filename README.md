@@ -190,10 +190,10 @@ mutation{
     }
 }
 ```
-updateAuthorInMovie:
+updateActorInMovie:
 ```graphql
 mutation{
-    updateAuthorInMovie(movieId:"25c8d1d1-a599-48ce-84f0-6a04f0da8751",actorId:"56cab785-ecd2-4d29-bd3e-1a514073a456"){
+    updateActorInMovie(movieId:"25c8d1d1-a599-48ce-84f0-6a04f0da8751",actorId:"56cab785-ecd2-4d29-bd3e-1a514073a456"){
         id
         title
         releaseyear
@@ -202,10 +202,10 @@ mutation{
     }
 }
 ```
-updateActorInMovie:
+updateAuthorInMovie:
 ```graphql
 mutation{
-    updateActorInMovie(movieId:"25c8d1d1-a599-48ce-84f0-6a04f0da8751",authorId:"2075ab80-e7c0-4a10-a39e-0c120159d1b5"){
+    updateAuthorrInMovie(movieId:"25c8d1d1-a599-48ce-84f0-6a04f0da8751",authorId:"2075ab80-e7c0-4a10-a39e-0c120159d1b5"){
         id
         title
         releaseyear
